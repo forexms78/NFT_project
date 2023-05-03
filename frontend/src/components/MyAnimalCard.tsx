@@ -38,12 +38,6 @@ const MyAnimalCard: FC<MyAnimalCardProps> = ({
 
   const onClickSell = async () => {
     try {
-      // const animalPrice = await saleAnimalTokenContract.methods
-      //   .animalTokenPrices(animalTokenId)
-      //   .call();
-
-      // console.log(animalPrice);
-
       if (!account || !saleStatus) return;
 
       const saleResponse = await saleAnimalTokenContract.methods
