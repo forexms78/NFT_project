@@ -11,7 +11,7 @@ interface SaleAnimalProps {
   account: string;
 }
 
-const SaleAnimal: FC<SaleAnimalProps> = () => {
+const SaleAnimal: FC<SaleAnimalProps> = ({ account }) => {
   const [saleAnimalCardArray, setSaleAnimalCardArray] =
     useState<IMyAnimalCard[]>();
 
@@ -62,6 +62,9 @@ const SaleAnimal: FC<SaleAnimalProps> = () => {
               key={i}
               animalType={v.animalType}
               animalPrice={v.animalPrice}
+              animalTokenId={v.animalTokenId}
+              account={account}
+              getOnSaleAnimalTokens={getOnSaleAnimalTokens}
             />
           );
         })}
