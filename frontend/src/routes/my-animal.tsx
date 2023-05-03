@@ -100,7 +100,6 @@ const MyAnimal: FC<MyAnimalProps> = ({ account }) => {
       <Grid templateColumns="repeat(4,1fr)" gap={8} mt={4}>
         {animalCardArray &&
           animalCardArray.map((v, i) => {
-            console.log(v);
             return (
               <MyAnimalCard
                 key={i}
